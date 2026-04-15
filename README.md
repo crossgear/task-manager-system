@@ -29,9 +29,20 @@ JavaScript (frontend).
 
 ## 📁 Project Structure
 
-task-manager/ │ ├── backend/ │ ├── manage.py │ ├── requirements.txt │
-├── config/ │ └── apps/ │ ├── accounts/ │ ├── projects/ │ └── tasks/ │
-├── frontend/ │ ├── templates/ │ ├── static/ │ │ ├── css/ │ │ └── js/ │
+task-manager/ 
+│ ├── backend/ 
+│ ├── manage.py 
+│ ├── requirements.txt │
+├── config/ 
+│ └── apps/ 
+│ ├── accounts/ 
+│ ├── projects/ 
+│ └── tasks/ │
+├── frontend/ 
+│ ├── templates/ 
+│ ├── static/ │ 
+│ ├── css/ │ 
+│ └── js/ │
 └── README.md
 
 ------------------------------------------------------------------------
@@ -40,16 +51,20 @@ task-manager/ │ ├── backend/ │ ├── manage.py │ ├── requi
 
 ### 1️⃣ Clone the repository
 
-git clone https://github.com/your-username/task-manager.git cd
-task-manager
+git clone https://github.com/crossgear/task-manager-system 
+cd task-manager
 
 ------------------------------------------------------------------------
 
 ### 2️⃣ Backend setup
 
-cd backend python -m venv venv source venv/bin/activate \# Linux/Mac
-venv`\Scripts`{=tex}`\activate     `{=tex}\# Windows
+cd backend python -m venv venv 
+source venv/bin/activate 
 
+\# Linux/Mac
+venv`\Scripts`{=tex}`\activate     `{=tex}
+
+\# Windows
 pip install -r requirements.txt
 
 ------------------------------------------------------------------------
