@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}dashboard{% endblock %}
+
+{% block content %}
+<h2>My Projects</h2>
+
+<button onclick="createProject()">+ New Project</button>
+
+<div id="projects" class="board"></div>
+
+<script type="module" src="{% static 'js/dashboard.js' %}"></script>
+
+{% endblock %}

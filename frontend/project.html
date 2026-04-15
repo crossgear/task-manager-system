@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Project{% endblock %}
+
+{% block content %}
+
+<h2>Kanban</h2>
+<br>
+<input id="taskTitle" placeholder="New task">
+<button onclick="createTask()">Add</button>
+<br>
+<br>
+<div class="board">
+
+    <div class="column-container">
+    <h3>Backlog</h3>
+    <div id="backlog" class="column" ondrop="drop(event, 'backlog')" ondragover="allowDrop(event)"> 
+    </div>
+    </div>
+
+    <div class="column-container">
+    <h3>In Progress</h3>
+    <div id="in_progress" class="column" ondrop="drop(event, 'in_progress')" ondragover="allowDrop(event)">
+    </div>
+    </div>
+    
+    <div class="column-container">
+    <h3>Done</h3>
+    <div id="done" class="column" ondrop="drop(event, 'done')" ondragover="allowDrop(event)">
+    </div>
+    </div>
+
+</div>
+
+<div id="taskModal" class="modal">
+    <div class="modal-content">
+        <h3>Edit Task</h3>
+
+        <input id="editTitle" placeholder="Title">
+
+        <textarea id="editDescription" placeholder="Description"></textarea>
+
+        <select id="editStatus">
+            <option value="backlog">Backlog</option>
+            <option value="in_progress">In Progress</option>
+            <option value="done">Done</option>
+        </select>
+
+        <label>Assigned to</label>
+        <select id="editAssigned"></select>
+
+        <br><br>
+
+        <div class="modal-actions">
+            <button onclick="saveTask()">Save</button>
+            <button onclick="deleteTask()" style="background:red;">Delete</button>
+            <button onclick="closeModal()">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<script type="module" src="{% static 'js/kanban.js' %}"></script>
+
+{% endblock %}

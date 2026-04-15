@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+
+<h3>Register</h3>
+
+<input id="regUsername" placeholder="Username">
+<input id="regPassword" type="password" placeholder="Password">
+
+<button id="registerBtn">Register</button><br><br>
+
+ya tienes cuenta? <a href="/">Inicia sesión aquí</a>
+
+<p id="error" style="color:red;"></p>
+
+<script type="module" src="{% static 'js/auth.js' %}"></script>
+
+</body>
+</html>
